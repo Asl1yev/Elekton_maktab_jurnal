@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %}
+{% block title %}Fan Qo'shish{% endblock title %}
+
+    {% block content %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mt-5">
+                    <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            StudentAPP
+          </div>
+          <ul class="list-group list-group-flush">
+            <a href="{% url 'fanlaradd' %}"><li class="list-group-item">Fan qo'shish</li></a>
+            <a href="{% url 'baholaradd' %}"><li class="list-group-item">Baho qo'yish</li></a>
+            <a href="{% url 'oquvchilaradd' %}"><li class="list-group-item">O'quvch Qo'shish</li></a>
+          </ul>
+    </div>
+            </div>
+              <div class="col-8 mt-5">
+                  <form method="POST">
+                      <h3>👇Yangi O'quvchi Qo'shish👇</h3>
+                      {% csrf_token %}
+                      {{ form.as_p }}
+
+                      <button type="submit" class="btn btn-dark">Saqlash</button>
+
+                  </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    {% endblock content %}
+
+

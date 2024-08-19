@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Oquvchilar royxati{% endblock title %}
+
+{% block content %}
+    <h2 class="text-center mb-3">Fanlar</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Fan nomi</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for fan in name %}
+    <tr>
+      <th scope="row">{{fan.id}}</th>
+      <td>{{fan.name}}</td>
+
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+{% endblock content %}

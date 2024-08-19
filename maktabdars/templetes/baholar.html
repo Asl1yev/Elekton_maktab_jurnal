@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Oquvchilar royxati{% endblock title %}
+
+{% block content %}
+    <h2 class="text-center mb-3">O'quvchilar Bahosi</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Ismi</th>
+      <th scope="col">Familyasi</th>
+      <th scope="col">Fan Nomi</th>
+      <th scope="col">Fan Bahosi</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for baholar in name %}
+    <tr>
+      <th scope="row">{{baholar.id}}</th>
+      <td>{{baholar.talaba.ismi}}</td>
+      <td>{{baholar.talaba.familyasi}}</td>
+      <td>{{baholar.fan}}</td>
+      <td>{{baholar.baho}}</td>
+
+
+    </tr>
+  {% endfor %}
+
+
+
+
+  </tbody>
+</table>
+{% endblock content %}

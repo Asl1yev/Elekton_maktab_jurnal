@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Oquvchilar royxati{% endblock title %}
+
+{% block content %}
+    <h2 class="text-center mb-3">O'quvchilar Ro'yxati</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Ismi</th>
+      <th scope="col">Familyasi</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for oquvchi in name %}
+    <tr>
+      <th scope="row">{{oquvchi.id}}</th>
+      <td>{{oquvchi.ismi}}</td>
+      <td>{{oquvchi.familyasi}}</td>
+
+    </tr>
+  {% endfor %}
+
+
+  </tbody>
+</table>
+{% endblock content %}
